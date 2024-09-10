@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <nav>
-      <!-- Menggunakan router link untuk memanggil path dari router folder untuk menampilkan page -->
-
-      <router-link to="/">Product Page</router-link> |
-
-      <router-link to="/priducts/:id">Detail Page</router-link> |
-
-      <router-link to="/cart">Cart Page</router-link> 
-
-    </nav>
+    <!-- Menggunakan router link untuk memanggil path dari router folder untuk menampilkan page -->
+    <NavbarShop />
     <router-view/>
   </div>
 </template>
+
+<script>
+import NavbarShop from './components/NavbarShop.vue';
+
+export default {
+  components: {
+    NavbarShop
+  }
+}
+</script>
 
 <style>
 * {
