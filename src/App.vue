@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- Menggunakan router link untuk memanggil path dari router folder untuk menampilkan page -->
+
+      <router-link :to="{ name: 'product' }">Product Page</router-link> |
+
+      <router-link :to="{ name: 'detail' }">Detail Page</router-link> |
+
+      <router-link :to="{ name: 'cart' }">Cart Page</router-link> |
+
     </nav>
     <router-view/>
   </div>
