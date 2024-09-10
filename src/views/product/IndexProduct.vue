@@ -7,8 +7,14 @@
     <div class="grid-warp">
       <!-- Menampilkan semua produk -->
       <div v-for="product in products" :key="product.id" class="product-item">
+      <img :src="product.image" alt="">
         <h2 class="product-name">{{ product.name }}</h2>
-        <p class="product-price">${{ product.price }}</p>
+        <p class="product-price">Rp.{{ product.price }}</p>
+
+        <!-- Membuat Link untuk button menuju ke detail (menambahkan property params yang berisikan id) -->
+        <router-link :to="{ name: 'detail', params :{id: product.id} }">
+          <button>Detail Page</button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -33,8 +39,8 @@ export default {
   .grid-warp {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 16px;
+    justify-content: space-evenly;
+    margin-top: 20px;
   }
 
   .product-item {
@@ -44,7 +50,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-bottom: 2%;
-    padding: 0px;
+    padding: 20px;
     position: relative;
     width: 32%;
   }
@@ -54,7 +60,7 @@ export default {
   }
 
   img {
-    height: 100px;
+    height: 140px;
     width: 200px;
     border-radius: 5px;
   }
@@ -64,6 +70,6 @@ export default {
   }
 
   button {
-    width: 100%;
+    width: 30%;
   }
 </style>
