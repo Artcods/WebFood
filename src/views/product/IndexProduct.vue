@@ -39,7 +39,7 @@ export default {
   .grid-warp {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 20px;
   }
 
@@ -70,6 +70,7 @@ export default {
   }
 
   button {
-    width: 30%;
+    align-items: center;
+    width: 50%;
   }
 </style>

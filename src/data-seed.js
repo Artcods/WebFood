@@ -23,7 +23,7 @@ export const products = [{
     id: 1,
     name: 'Product 1',
     price: 100000,
-    description: 'Product 1 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage1,
     quantity: 10
   },
@@ -31,7 +31,7 @@ export const products = [{
     id: 2,
     name: 'Product 2',
     price: 200000,
-    description: 'Product 2 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage2,
     quantity: 5
   },
@@ -39,7 +39,7 @@ export const products = [{
     id: 3,
     name: 'Product 3',
     price: 300000,
-    description: 'Product 3 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage3,
     quantity: 3
   },
@@ -47,7 +47,7 @@ export const products = [{
     id: 4,
     name: 'Product 4',
     price: 400000,
-    description: 'Product 4 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage4,
     quantity: 15
   },
@@ -55,7 +55,7 @@ export const products = [{
     id: 5,
     name: 'Product 5',
     price: 500000,
-    description: 'Product 5 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage5,
     quantity: 7
   },
@@ -63,7 +63,7 @@ export const products = [{
     id: 6,
     name: 'Product 6',
     price: 600000,
-    description: 'Product 6 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage6,
     quantity: 12
   },
@@ -71,7 +71,7 @@ export const products = [{
     id: 7,
     name: 'Product 7',
     price: 700000,
-    description: 'Product 7 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage7,
     quantity: 8
   },
@@ -79,7 +79,7 @@ export const products = [{
     id: 8,
     name: 'Product 8',
     price: 800000,
-    description: 'Product 8 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage8,
     quantity: 13
   },
@@ -87,7 +87,7 @@ export const products = [{
     id: 9,
     name: 'Product 9',
     price: 900000,
-    description: 'Product 9 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage9,
     quantity: 6
   },
@@ -95,7 +95,7 @@ export const products = [{
     id: 10,
     name: 'Product 10',
     price: 1000000,
-    description: 'Product 10 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage10,
     quantity: 4
   },
@@ -103,7 +103,7 @@ export const products = [{
     id: 11,
     name: 'Product 11',
     price: 1100000,
-    description: 'Product 11 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage11,
     quantity: 9
   },
@@ -111,7 +111,7 @@ export const products = [{
     id: 12,
     name: 'Product 12',
     price: 1200000,
-    description: 'Product 12 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage12,
     quantity: 11
   },
@@ -119,7 +119,7 @@ export const products = [{
     id: 13,
     name: 'Product 13',
     price: 1300000,
-    description: 'Product 13 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage13,
     quantity: 14
   },
@@ -127,7 +127,7 @@ export const products = [{
     id: 14,
     name: 'Product 14',
     price: 1400000,
-    description: 'Product 14 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage14,
     quantity: 16
   },
@@ -135,7 +135,7 @@ export const products = [{
     id: 15,
     name: 'Product 15',
     price: 1500000,
-    description: 'Product 15 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage15,
     quantity: 20
   },
@@ -143,7 +143,7 @@ export const products = [{
     id: 16,
     name: 'Product 16',
     price: 1600000,
-    description: 'Product 16 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage16,
     quantity: 18
   },
@@ -151,7 +151,7 @@ export const products = [{
     id: 17,
     name: 'Product 17',
     price: 1700000,
-    description: 'Product 17 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage17,
     quantity: 19
   },
@@ -159,7 +159,7 @@ export const products = [{
     id: 18,
     name: 'Product 18',
     price: 1800000,
-    description: 'Product 18 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage18,
     quantity: 2
   },
@@ -167,7 +167,7 @@ export const products = [{
     id: 19,
     name: 'Product 19',
     price: 1900000,
-    description: 'Product 19 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage19,
     quantity: 17
   },
@@ -175,7 +175,7 @@ export const products = [{
     id: 20,
     name: 'Product 20',
     price: 2000000,
-    description: 'Product 20 Description',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere repudiandae rerum',
     image: productImage20,
     quantity: 10
   }
