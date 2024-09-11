@@ -7,10 +7,14 @@
     <div class="page-wrap">
       <!-- Menampilkan semua produk -->
       <div class="grid-wrap">
+
+        
         <!-- buat props lalu diisi dengan data products -->
-         <!--  Membuat props di componentsnya untuk mengirimkan data dari product ke components -->
-        <ProductItemComponent v-for="product in products" :key="product.id" 
-        :product="product"/>
+        <!--  Membuat props di componentsnya untuk mengirimkan data dari product ke components -->
+        <ProductItemComponent v-for="Dataproduct in products" :key="Dataproduct.id" 
+        :productProps="Dataproduct"/>
+
+
       </div>
     </div>
   </div>
@@ -20,6 +24,8 @@
 
 /* Mengambil data product dari file seed */
 import { products } from '../../data-seed'
+
+/* Mengimport component ProductItem */
 import ProductItemComponent from '../../components/ProductItem.vue'
 
 /* Mengenalkannya pada data di export default */
@@ -29,6 +35,7 @@ export default {
       products,
     }
   },
+  /* Mencantumkan components supaya dikenal oleh file ini */
   components: {
     ProductItemComponent
   }
