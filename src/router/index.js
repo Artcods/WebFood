@@ -8,6 +8,9 @@ import Detail from '../views/product/DetailProduct.vue'
 /* Definisikan ShopCart */
 import Cart from '../views/shopcart/IndexCart.vue'
 
+/* Definisikan Not Found */
+import NotFound from '../views/errors/ErrorNotFound.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,9 +26,15 @@ const routes = [
   },
   {
     path: '/cart',
-    name: 'product',
+    name: 'cart',
     component: Cart
   },
+  {
+    path: '*',
+    name: 'not-found',
+    component: NotFound
+    // component: () => import('../views/NotFound.vue')
+  }
 
 ]
 

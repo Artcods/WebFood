@@ -5,8 +5,9 @@
 
   <div>
 
-    <h1>Detail Page</h1>
-    <div id="image-wrap">
+    <!-- Jika ada maka tampilkan product -->
+    <div id="image-wrap" v-if="product">
+      <h1>Detail Page</h1>
       <div>
         <img :src="product.image" alt="">
       </div>
@@ -19,6 +20,9 @@
         <p>{{ product.description }}</p>
       </div>
     </div>
+
+    <NotFound v-else/>
+
   </div>
 
 </template>
@@ -26,12 +30,16 @@
 <script>
 
 import { products } from '@/data-seed';
+import NotFound from '../errors/ErrorNotFound.vue'
 
 export default {
   data() {
     return {
       products
     }
+  },
+  components: {
+    NotFound
   },
   /* Cara mengatasinya dengan menggunakan computed supaya dapat memanipulasi */
   /* computed berfungsi untuk mengubah suatu data yang sudah ada ke format yang baru (memanipulasi datanya) */
