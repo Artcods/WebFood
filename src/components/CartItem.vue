@@ -4,7 +4,7 @@
     <div class="detail-wrap">
       <h3>{{ itemProps.name }}</h3>
       <p>{{ itemProps.price }}</p>
-      <button class="remove-button">Remove</button>
+      <button class="remove-button" @click="$emit('remove-item', itemProps.code)">Remove</button>
     </div>
   </div>
 

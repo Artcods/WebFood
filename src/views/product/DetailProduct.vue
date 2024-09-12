@@ -7,6 +7,7 @@
 
     <!-- Jika ada maka tampilkan product -->
     <div id="image-wrap" v-if="product">
+      <h4 v-if="notif" class="notif">Item Added</h4>
       <h1>Detail Page</h1>
       <div>
         <img :src="`http://localhost:8000/${product.image}`" alt="">
@@ -16,7 +17,7 @@
         <h1>{{ product.name }}</h1>
         <h3 id="price">Rp.{{ product.price }}</h3>
         <p>Quantity : {{ product.quantity }}</p>
-        <button id="add-to-card">Cart</button>
+        <button id="add-to-card" @click="addToCart(product.code)">Cart</button>
         <p>{{ product.description }}</p>
       </div>
     </div>
@@ -35,7 +36,8 @@ import NotFound from '../errors/ErrorNotFound.vue'
 export default {
   data() {
     return {
-      product: {}
+      product: {},
+      notif: false
     }
   },
   components: {
@@ -68,6 +70,17 @@ export default {
     this.product = response.data; // Simpan data ke data products
     } catch (error) {
     console.error(error); // Tangani error jika ada
+    }
+  },
+  methods: {
+    async addToCart(product) {
+      await axios.post(`http://localhost:8000/api/order/user/1/add`, {
+        /* BODY REQUEST */
+        product: product
+      })
+      this.notif = true
+      // Tambahkan product ke cart
+      //...
     }
   }
 }
@@ -105,5 +118,13 @@ export default {
 
   h3 {
     text-align: center;
+  }
+
+  .notif {
+    text-align: center;
+    color: white;
+    background-color: #41B883;
+    padding: 3%;
+    border-radius: 8px;
   }
 </style>

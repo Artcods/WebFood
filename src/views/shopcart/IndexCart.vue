@@ -5,7 +5,7 @@
     <h1>shop cart Page</h1>
 
 
-      <Cart v-for="Dataitem in cartItems" :key="Dataitem.id" :itemProps="Dataitem"/>
+    <Cart v-for="Dataitem in cartItems" :key="Dataitem.id" :itemProps="Dataitem" v-on:remove-item="removeFromCart"/>
 
     <button id="checkout-button">Checkout</button>
     <h id="total-price">Total : {{ totalPrice }}</h>
@@ -54,6 +54,19 @@ export default {
     console.error(error); // Tangani error jika ada
   }
   },
+  methods: {
+    async removeFromCart(productCode) {
+      try {
+        await axios.delete(`http://localhost:8000/api/order/user/1/product/${productCode}`);
+        const index = this.cartItems.findIndex(item => item.code === productCode);
+        if (index !== -1) {
+          this.cartItems.splice(index, 1);
+        }
+      } catch (error) {
+        console.error('Error removing item from cart:', error);
+      }
+    }
+  }
 }
 </script>
 
