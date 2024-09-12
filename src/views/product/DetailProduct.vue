@@ -9,7 +9,7 @@
     <div id="image-wrap" v-if="product">
       <h1>Detail Page</h1>
       <div>
-        <img :src="product.image" alt="">
+        <img :src="`http://localhost:8000/${product.image}`" alt="">
       </div>
 
       <div id="product-detail">
@@ -29,13 +29,13 @@
 
 <script>
 
-import { products } from '@/data-seed';
+import axios from 'axios';
 import NotFound from '../errors/ErrorNotFound.vue'
 
 export default {
   data() {
     return {
-      products
+      product: {}
     }
   },
   components: {
@@ -43,23 +43,32 @@ export default {
   },
   /* Cara mengatasinya dengan menggunakan computed supaya dapat memanipulasi */
   /* computed berfungsi untuk mengubah suatu data yang sudah ada ke format yang baru (memanipulasi datanya) */
-  computed: {
+
+  /* Mengarahkan data dengan menggunakan method find (data tersebut akan mengecek) ... */
+  /* Apakah nilai id sama dengan parameter, nilai parameter diambil dari $route untuk mendapatkan (:id) didalam path disertakan params */
+  /* computed: {
     product() {
 
-      /* Mengarahkan data dengan menggunakan method find (data tersebut akan mengecek) ... */
       return this.products.find((x) => {
-        /* Apakah nilai id sama dengan parameter, nilai parameter diambil dari $route untuk mendapatkan (:id) didalam path disertakan params */
 
         return x.id === this.$route.params.id
       })
     }
-  },
-  mounted() {
+  }, */
+  async created() {
     /* lifecycle mounted menampilkan sesuai jumlah mentah-mentah yaitu 20 tidak sesuai yang kita pilih */
     // console.log(this.products) // ini salah karena tidak sesuai keinginan kita
 
     // memanggil dari memanipulasi data dari computed
-    console.log(this.product)
+    // Ambil data product dari API
+    try {
+    const code = this.$route.params.id
+    const response = await axios.get(`http://localhost:8000/api/products/${code}`);
+    // Periksa data yang diterima
+    this.product = response.data; // Simpan data ke data products
+    } catch (error) {
+    console.error(error); // Tangani error jika ada
+    }
   }
 }
 </script>

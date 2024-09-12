@@ -1,12 +1,12 @@
 <template>
     <!-- Membuat tampilan item product kemudian dibuat didalam component untuk digunakan oleh indexproduct -->
     <div class="product-item">
-        <img :src="productProps.image" alt="">
+        <img :src="`http://localhost:8000/${productProps.image}`" alt="">
         <h2 class="product-name">{{ productProps.name }}</h2>
         <p class="product-price">Rp.{{ productProps.price }}</p>
 
         <!-- Membuat Link untuk button menuju ke detail (menambahkan property params yang berisikan id) -->
-        <router-link :to="{ name: 'detail', params: { id: productProps.id } }">
+        <router-link :to="{ name: 'detail', params: { id: productProps.code } }">
             <button>Detail Page</button>
         </router-link>
     </div>
