@@ -14,13 +14,13 @@
 
 <script>
 
-import { cartItems } from '@/data-seed';
+import axios from "axios";
 import Cart from '../../components/CartItem.vue'
 
 export default {
   data() {
     return {
-      cartItems
+      cartItems: []
     }
   },
   components: {
@@ -33,7 +33,27 @@ export default {
       return total;
     }
 
+  },
+  async created() {
+    try {
+    // Mengambil data dari API
+    const response = await axios.get('http://localhost:8000/api/order/user/1');
+
+    // Pastikan response.data adalah array dan ambil item pertama
+    const data = response.data[0]; 
+
+    // Filter produk berdasarkan cart_items
+    const filteredProducts = data.products.filter(product => data.cart_items.includes(product.code));
+
+    // Simpan produk yang telah difilter ke cartItems
+    this.cartItems = filteredProducts;
+
+    // Periksa data yang diterima
+    console.log(this.cartItems);
+  } catch (error) {
+    console.error(error); // Tangani error jika ada
   }
+  },
 }
 </script>
 

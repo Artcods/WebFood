@@ -1,6 +1,6 @@
 <template>
   <div class="product-container">
-    <img :src="itemProps.image" alt="" class="product-image">
+    <img :src="`http://localhost:8000/${itemProps.image}`" alt="" class="product-image">
     <div class="detail-wrap">
       <h3>{{ itemProps.name }}</h3>
       <p>{{ itemProps.price }}</p>

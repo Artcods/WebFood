@@ -23,8 +23,10 @@
 <script>
 
 /* Mengambil data product dari file seed */
-import { products } from '../../data-seed'
+/* import { products } from '../../data-seed' */
 
+/* untuk memanggil data dari database */
+import axios from 'axios';
 /* Mengimport component ProductItem */
 import ProductItemComponent from '../../components/ProductItem.vue'
 
@@ -32,7 +34,22 @@ import ProductItemComponent from '../../components/ProductItem.vue'
 export default {
   data() {
     return {
-      products,
+      products: [], // data didapatkan dari endpoint dari axios
+    }
+  },
+  /* pada saat memanggil proses fetch belum selesai */
+  async created() {
+    /* testing API */
+    /* const response = await axios.get('http://localhost:8000/api/products');
+    console.log(response.data); */ // cek apakah request berhasil
+
+    // Ambil data product dari API
+    try {
+    const response = await axios.get('http://localhost:8000/api/products');
+    // Periksa data yang diterima
+    this.products = response.data; // Simpan data ke data products
+    } catch (error) {
+    console.error(error); // Tangani error jika ada
     }
   },
   /* Mencantumkan components supaya dikenal oleh file ini */
