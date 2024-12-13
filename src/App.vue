@@ -2,6 +2,7 @@
   <div id="app">
     <!-- Menggunakan router link untuk memanggil path dari router folder untuk menampilkan page -->
     <NavbarShop />
+    
     <router-view/>
   </div>
 </template>
@@ -19,25 +20,7 @@ export default {
 <style>
 * {
   box-sizing: border-box;
-  font-family: Arial;
-}
-
-#page-wrap {
-  margin: auto;
-  max-width: 800px;
-  min-width: 100vh;
-}
-
-button {
-  background-color: #418883;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  outline: 0;
-  padding: 16px;
+  font-family: Arial, sans-serif;
 }
 
 #app {
@@ -48,16 +31,102 @@ button {
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+#page-wrap {
+  margin: auto;
+  max-width: 800px;
+  min-width: 100vh;
 }
 
-nav a {
+button {
+  background-color: #ffff;
+  border: none;
+  border-radius: 8px;
+  color: #DA292C;
+  cursor: pointer;
+  font-size: 16px;
   font-weight: bold;
-  color: #2c3e50;
+  outline: 0;
+  padding: 10px;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+/* Jumbotron Styling */
+.jumbotron {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.jumbotron-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jumbotron-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.jumbotron-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.jumbotron-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.jumbotron-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.jumbotron-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .jumbotron-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .jumbotron-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-image {
+    max-width: 100%;
+  }
+
+  .jumbotron-text h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jumbotron-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .jumbotron-text p {
+    font-size: 0.9rem;
+  }
 }
 </style>
